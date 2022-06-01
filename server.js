@@ -39,15 +39,23 @@ client.on("error", (err) => {
 const handleHomePage = require("./controllers/home.controller.js");
 const handleSearch = require("./controllers/search.controller.js");
 const handleDetails = require("./controllers/details.controller.js");
+const handleFavorites = require("./controllers/favorites.controller.js");
+const showFavorites = require("./controllers/showFavorites.controller.js");
+const removeFavorites = require("./controllers/removeFavorites.controller.js");
+const editSong = require("./controllers/editSong.controller.js");
+const updateSong = require("./controllers/updateSong.controller.js");
+const aboutUs = require("./controllers/about.controller.js");
 
 //API routes
 app.get("/", handleHomePage);
 app.get("/results", handleSearch);
 app.get("/details/:id", handleDetails);
-
-function aboutUs(req, res) {
-  res.render("./pages/about");
-}
+app.post("/addFavorites", handleFavorites);
+app.get("/favorites", showFavorites);
+app.delete("/favorites/:id", removeFavorites);
+app.get("/editSong/:id", editSong);
+app.put("/updateSong/:id", updateSong);
+app.get("/about", aboutUs);
 
 app.get("*", (req, res) => res.status(404).send("Ouch Not Found!"));
 
