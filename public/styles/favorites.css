@@ -1,0 +1,111 @@
+body {
+    overflow-x: hidden;
+}
+
+.fav {
+    position: relative;
+    width: 90%;
+    height: 400px;
+    background-color: #ffe3fe;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.6);
+    transition-duration: 300ms;
+    left: 30px;
+    margin-bottom: 40px;
+}
+
+
+/* .fav:hover {
+    box-shadow: 10px 10px 10px 10px rgba(68, 10, 103, 0.5);
+    transition-duration: 300ms;
+} */
+
+#img {
+    border-radius: 200px;
+    width: 150px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+#lyrics {
+    position: absolute;
+    top: 260px;
+    left: 20px;
+    width: 90%;
+    height: 100px;
+    overflow: overlay;
+    overflow-x: hidden;
+    /* margin-left: 10px; */
+}
+
+#flexItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#title {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+#name {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+#remove {
+    position: absolute;
+    top: 220px;
+    left: 20px;
+    border: 0px;
+    background-color: transparent;
+}
+
+#audio {
+    position: absolute;
+    bottom: 195px;
+    left: 20px;
+    /* filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%); */
+    width: 200px;
+    height: 25px;
+    /* margin-left: 10px; */
+}
+
+#update {
+    position: absolute;
+    top: 220px;
+    left: 70px;
+    border: 0px;
+    background-color: transparent;
+}
+
+#comment {
+    position: absolute;
+    top: 240px;
+    left: 20px
+}
+
+footer {
+    margin-top: 50px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+@media(max-width:768px) {
+    #flexItem {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .fav {
+        width: 100%;
+    }
+}
+
+i:hover {
+    cursor: pointer;
+}

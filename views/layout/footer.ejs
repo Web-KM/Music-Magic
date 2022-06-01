@@ -1,0 +1,144 @@
+<footer class="footer">
+    <style>
+        /*--------------------------------------------------------------
+    Footer styles
+    --------------------------------------------------------------*/
+        
+        .footer {
+            background: #ffe3fe;
+            color: hsl(0, 0%, 10%);
+            ;
+        }
+        
+        @media screen and (min-width: 50em) {
+            .footer-widgets {
+                -js-display: flex;
+                display: flex;
+                justify-content: space-between;
+            }
+            .widget {
+                width: 30%;
+            }
+        }
+        
+        .widget-title {
+            font-size: 1.3em;
+        }
+        
+        .footer-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .footer-menu a {
+            display: block;
+            padding-bottom: .5em;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .footer-menu a:focus::before,
+        .footer-menu a:hover::before {
+            margin-right: .5em;
+            content: "›";
+        }
+        
+        .footer-cta a {
+            display: block;
+            margin-top: 1em;
+            padding: 0 .5em;
+            font-size: 2em;
+            font-weight: 900;
+            color: #fffced;
+            text-align: center;
+            text-decoration: none;
+            border: 5px solid #fffced;
+            background-color: #440a67;
+            ;
+        }
+        
+        .footer-cta a:focus,
+        .footer-cta a:hover {
+            background: #fffced;
+            color: #440a67;
+        }
+        
+        .social-nav {
+            margin: 1em 0 0;
+            padding: 1em 0;
+            background: #440a67;
+        }
+        
+        .social-nav ul {
+            -js-display: flex;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .social-nav a {
+            padding: 1em;
+        }
+        
+        .social-nav svg {
+            width: 1.4em;
+            height: auto;
+        }
+        
+        .social-nav path {
+            fill: #FFFCED;
+        }
+    </style>
+    <section class="footer-widgets centered">
+        <div class="widget footer-menu">
+            <h4 class="widget-title">Find your way</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/favorites">Favorites</a></li>
+            </ul>
+        </div>
+        <!-- .widget -->
+        <div class="widget footer-cta">
+            <h4 class="widget-title">Join Our Events</h4>
+            <p>What are you waiting for? Join our events to make your music life better.</p>
+            <a href="#">Listen Now!</a>
+
+        </div>
+        <!-- .widget -->
+        <div class="widget footer-address">
+            <address>
+                <h4 class="widget-title">Music Magic</h4>
+                <p>
+                    Music Magic<br>
+                    Amman, Jordan<br>
+                </p>
+            </address>
+        </div>
+        <!-- .widget -->
+    </section>
+    <!-- .footer-widgets -->
+    <nav class="social-nav">
+        <ul>
+            <li>
+                <a class="icon-linkedin" data-grunticon-embed href="https://linkedin.com"></a>
+            </li>
+            <li>
+                <a class="icon-twitter" data-grunticon-embed href="https://twitter.com"></a>
+            </li>
+            <li>
+                <a class="icon-facebook" data-grunticon-embed href="https://facebook.com"></a>
+            </li>
+            <li>
+                <a class="icon-instagram" data-grunticon-embed href="https://instagram.com"></a>
+            </li>
+            <li>
+                <a class="icon-youtube" data-grunticon-embed href="https://youtube.com"></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- .social-nav -->
+</footer>
+<!-- .footer -->

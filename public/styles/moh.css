@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffe3fe;
+}
+
+.row {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;  
+    */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    /* width: 100%; */
+    justify-content: space-around;
+    align-content: stretch;
+    margin: 50px;
+}
+
+.card {
+    margin: 20px;
+    height: 424px;
+    width: 248px;
+    background: rgba(67, 10, 102, 0.603);
+    padding: 20px;
+    /* border: 2px solid rgba(67, 10, 102, 0.603); */
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 7px;
+}
+
+.card:hover {
+    transform: scale(1.04, 1.04);
+    transition: .5s ease;
+}
+
+.card .imgBox {
+    height: 240px;
+    width: 240px;
+}
+
+.card .imgBox img {
+    height: 100%;
+    width: 100%;
+    border: 4px solid #ddd;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.card .imgBox img:hover {
+    opacity: 0.75;
+    transition: .5s ease;
+}
+
+.card h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    margin-top: 15px;
+}
+
+.card h3 {
+    font-size: 0.8em;
+    color: #fff;
+    text-align: center;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    /* margin-top: -15px; */
+}
+
+.card .btn {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #440a67;
+    padding: 10px 48px;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background: #b4aee8;
+}
+
+.card .btn:hover {
+    opacity: 0.75;
+    background: #440a67;
+    transition: .5s ease;
+    color: #fff;
+}

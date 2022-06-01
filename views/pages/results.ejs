@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../layout/head') %>
+        <link rel="stylesheet" href="./styles/moh.css">
+</head>
+
+<body>
+    <%- include('../layout/header') %>
+        <main>
+            <div class="row">
+                <% song.forEach(value => { %>
+
+                    <div class="card">
+
+                        <div class="imgBox">
+                            <img src="<%=value.artist_picture %>" alt="artistpic" height="240px" width="240px">
+                        </div>
+                        <h2>
+                            <%= value.title_short %>
+                        </h2>
+                        <h3>
+                            <%= value.artist_name %>
+                        </h3>
+                        <form action="/details/<%=value.id %>" method="GET">
+                            <button class="btn">View Details</button>
+                        </form>
+                    </div>
+
+
+                    <% })%>
+            </div>
+
+        </main>
+
+
+</body>
+
+</html>

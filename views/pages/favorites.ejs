@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('../layout/head')%>
+        <link rel="stylesheet" href="styles/favorites.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <%- include('../layout/header')%>
+    </header>
+    <!-- <p>you have
+        <%=favResults.length%> items</p> -->
+    <main id="flexItem">
+        <% favResults.forEach(value=>{ %>
+            <section>
+                <div class="fav">
+                    <h3 id="title">
+                        <%=value.title_short%>
+                    </h3>
+                    <p id="name">
+                        <%=value.artist_name%>
+                    </p>
+
+                    <img id="img" src="<%=value.artist_picture%>" alt="">
+
+                    <p id="lyrics">
+                        <%= value.lyrics%>
+                    </p>
+                    <audio controls id="audio">
+                        <source src="<%=value.audio %>" type="audio/mpeg">
+                    </audio>
+                    <p id="comment">
+                        <%=value.comment%>
+                    </p>
+                    <form action="/favorites/<%=value.id %>?_method=delete" method="POST">
+                        <button id="remove" title="Delete From Favorites"> <i class="fas fa-trash-alt"></i></button>
+                    </form>
+
+                    <form action="/editSong/<%=value.id %>">
+                        <button id="update" title="Update details"><i class="fas fa-edit"></i>
+                            
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <%})%>
+    </main>
+    <%-include('../layout/footer')%>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+ul {
+    list-style-type: none;
+}
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: cornsilk;
+    padding: 40px;
+    width: 600px;
+    margin: auto;
+    background-color: rgba(67, 10, 102, 0.5);
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.6);
+}
+
+input {
+    width: 200px;
+    margin: 60px 100px;
+}
+
+textarea {
+    /* margin: 40px 100px; */
+    width: 400px;
+    height: 150px;
+}
+
+label.potato {
+    position: relative;
+    bottom: 140px;
+    margin-right: 50px;
+}
+
+label {
+    /* font-family: cursive; */
+    font-weight: 600px;
+}
+
+button {
+    margin-left: 280px;
+    color: white;
+    background-color: rgba(67, 10, 102, 0.5);
+    ;
+    border: none;
+}
+
+input[type=text] {
+    width: 300px;
+}

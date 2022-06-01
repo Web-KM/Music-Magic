@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../layout/head') %>
+        <link rel="stylesheet" href="/styles/details.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('../layout/header') %>
+        <main>
+            <form action="/addFavorites" method="POST">
+                <ul>
+                    <li>
+                        <input type="hidden" name="id" value="<%=song.id%>">
+                        <input type="hidden" name="songName" value="<%= song.title_short %>">
+                        <p id="song-name">
+                            <%=song.title_short%>
+
+                        </p>
+                        <input type="hidden" name="artistName" value="<%= song.artist_name %>">
+                        <p id="artist_name">
+                            <%= song.artist_name %>
+                        </p><br>
+                        <input type="hidden" name="artistImg" value="<%=song.artist_picture %>"><img src="<%=song.artist_picture %>">
+                        <input type="hidden" name="lyrics" value=" <%=song.lyrics%>">
+                        <div>
+                            <p id="lyrics">
+                                <span>Song Lyrics</span> <br>
+
+                                <em><%=song.lyrics%></em>
+                            </p>
+                        </div>
+                        <br>
+                        <input type="hidden" name="audio" value="<%=song.previewAudio %>">
+
+                        <audio controls>
+                            <source src="<%=song.previewAudio %>" type="audio/mpeg">
+                        </audio><br>
+                        <div id="comment-fav">
+                            <input type="text" name="comment" placeholder="leave your comment here!"> </input>
+                            <div id="all-fav">
+                                <button type="submit"><i class="fas fa-heart"></i>
+                                
+                            </button>
+                                <p id="fav-p">Add To My Favorites</p>
+
+
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </form>
+        </main>
+        <%- include('../layout/footer') %>
+</body>
+
+</html>
